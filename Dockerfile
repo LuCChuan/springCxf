@@ -9,4 +9,4 @@ COPY . /usr/share/nginx/html
 EXPOSE 80
 
 # Start Nginx and keep it running background and start php
-CMD sed -i "s/ContainerID: /ContainerID: "$(hostname)"/g" /springCxf && nginx -g "daemon off;"
+CMD sed -i "s/ContainerID: /ContainerID: "$(hostname)"/g" /usr/share/nginx/html/springCxf && nginx -g "daemon off;"
